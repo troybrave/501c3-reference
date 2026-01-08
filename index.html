@@ -882,6 +882,243 @@
     }
 
     /* ===================================
+       CHATBOT STYLES
+       =================================== */
+    .chat-toggle {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--ew-electric-blue) 0%, var(--blue-700) 100%);
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 20px rgba(0, 163, 255, 0.4);
+      transition: all 0.3s var(--ease-smooth);
+      z-index: 1000;
+    }
+
+    .chat-toggle:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 30px rgba(0, 163, 255, 0.5);
+    }
+
+    .chat-toggle svg {
+      width: 28px;
+      height: 28px;
+      color: white;
+    }
+
+    .chat-toggle .close-icon {
+      display: none;
+    }
+
+    .chat-toggle.active .chat-icon {
+      display: none;
+    }
+
+    .chat-toggle.active .close-icon {
+      display: block;
+    }
+
+    .chat-panel {
+      position: fixed;
+      bottom: 100px;
+      right: 24px;
+      width: 400px;
+      max-width: calc(100vw - 48px);
+      height: 500px;
+      max-height: calc(100vh - 150px);
+      background: var(--gray-900);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: var(--radius-xl);
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+      z-index: 999;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(20px) scale(0.95);
+      transition: all 0.3s var(--ease-smooth);
+    }
+
+    .chat-panel.active {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0) scale(1);
+    }
+
+    .chat-header {
+      padding: 16px 20px;
+      background: linear-gradient(135deg, rgba(0, 163, 255, 0.15) 0%, rgba(0, 102, 204, 0.1) 100%);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+    }
+
+    .chat-header h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--ew-pure-white);
+      margin-bottom: 4px;
+    }
+
+    .chat-header p {
+      font-size: 0.75rem;
+      color: var(--gray-400);
+    }
+
+    .chat-messages {
+      flex: 1;
+      overflow-y: auto;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .chat-message {
+      max-width: 85%;
+      padding: 12px 16px;
+      border-radius: var(--radius-lg);
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    .chat-message.user {
+      align-self: flex-end;
+      background: var(--ew-electric-blue);
+      color: white;
+      border-bottom-right-radius: 4px;
+    }
+
+    .chat-message.assistant {
+      align-self: flex-start;
+      background: var(--gray-800);
+      color: var(--gray-100);
+      border-bottom-left-radius: 4px;
+    }
+
+    .chat-message.assistant a {
+      color: var(--ew-electric-blue);
+    }
+
+    .chat-message.typing {
+      display: flex;
+      gap: 4px;
+      padding: 16px;
+    }
+
+    .chat-message.typing span {
+      width: 8px;
+      height: 8px;
+      background: var(--gray-500);
+      border-radius: 50%;
+      animation: typing 1.4s infinite;
+    }
+
+    .chat-message.typing span:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+
+    .chat-message.typing span:nth-child(3) {
+      animation-delay: 0.4s;
+    }
+
+    @keyframes typing {
+      0%, 60%, 100% { transform: translateY(0); opacity: 0.4; }
+      30% { transform: translateY(-4px); opacity: 1; }
+    }
+
+    .chat-input-area {
+      padding: 16px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      display: flex;
+      gap: 8px;
+    }
+
+    .chat-input {
+      flex: 1;
+      padding: 12px 16px;
+      background: var(--gray-800);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: var(--radius-md);
+      color: var(--ew-pure-white);
+      font-size: 0.9rem;
+      font-family: var(--font-body);
+      resize: none;
+      min-height: 44px;
+      max-height: 120px;
+    }
+
+    .chat-input:focus {
+      outline: none;
+      border-color: var(--ew-electric-blue);
+    }
+
+    .chat-input::placeholder {
+      color: var(--gray-500);
+    }
+
+    .chat-send {
+      width: 44px;
+      height: 44px;
+      background: var(--ew-electric-blue);
+      border: none;
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s var(--ease-smooth);
+    }
+
+    .chat-send:hover:not(:disabled) {
+      background: var(--blue-600);
+    }
+
+    .chat-send:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    .chat-send svg {
+      width: 20px;
+      height: 20px;
+      color: white;
+    }
+
+    .chat-disclaimer {
+      padding: 8px 16px;
+      background: rgba(255, 183, 0, 0.1);
+      border-top: 1px solid rgba(255, 183, 0, 0.2);
+      font-size: 0.7rem;
+      color: var(--gray-400);
+      text-align: center;
+    }
+
+    @media (max-width: 480px) {
+      .chat-panel {
+        bottom: 0;
+        right: 0;
+        left: 0;
+        width: 100%;
+        max-width: 100%;
+        height: calc(100vh - 80px);
+        max-height: none;
+        border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+      }
+
+      .chat-toggle {
+        bottom: 16px;
+        right: 16px;
+      }
+    }
+
+    /* ===================================
        PRINT STYLES
        =================================== */
     @media print {
@@ -2284,6 +2521,39 @@ Secretary</code></pre>
     </svg>
   </button>
 
+  <!-- CHATBOT -->
+  <button class="chat-toggle" id="chatToggle" aria-label="Open chat assistant">
+    <svg class="chat-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+    </svg>
+    <svg class="close-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+    </svg>
+  </button>
+
+  <div class="chat-panel" id="chatPanel">
+    <div class="chat-header">
+      <h3>501(c)(3) Tax Assistant</h3>
+      <p>Ask questions about nonprofit tax compliance</p>
+    </div>
+    <div class="chat-messages" id="chatMessages">
+      <div class="chat-message assistant">
+        Hi! I'm your 501(c)(3) tax assistant. I can answer questions about housing allowances, compensation, vehicle use, benevolence, and other nonprofit tax topics. How can I help?
+      </div>
+    </div>
+    <div class="chat-input-area">
+      <textarea class="chat-input" id="chatInput" placeholder="Ask about 501(c)(3) taxes..." rows="1"></textarea>
+      <button class="chat-send" id="chatSend" aria-label="Send message">
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+        </svg>
+      </button>
+    </div>
+    <div class="chat-disclaimer">
+      AI-generated. Consult a tax professional for specific advice.
+    </div>
+  </div>
+
   <script>
     // ===================================
     // SCROLL SPY
@@ -2443,12 +2713,133 @@ Secretary</code></pre>
         searchInput.focus();
       }
 
-      // Escape to close search
+      // Escape to close search or chat
       if (e.key === 'Escape') {
         searchResults.classList.remove('active');
         searchInput.blur();
+        chatPanel.classList.remove('active');
+        chatToggle.classList.remove('active');
       }
     });
+
+    // ===================================
+    // CHATBOT
+    // ===================================
+    const chatToggle = document.getElementById('chatToggle');
+    const chatPanel = document.getElementById('chatPanel');
+    const chatMessages = document.getElementById('chatMessages');
+    const chatInput = document.getElementById('chatInput');
+    const chatSend = document.getElementById('chatSend');
+
+    // Supabase Edge Function endpoint (secure - API key is server-side)
+    const CHAT_API = 'https://jriquvajwzarvrvlgpem.supabase.co/functions/v1/tax-assistant';
+
+    // Extract page content as knowledge base
+    function getKnowledgeBase() {
+      const main = document.querySelector('main');
+      const sections = main.querySelectorAll('.section, .subsection');
+      let content = '';
+      sections.forEach(section => {
+        const title = section.querySelector('h2, h3')?.textContent || '';
+        const text = section.querySelector('.content')?.textContent || section.textContent;
+        content += `\n## ${title}\n${text.substring(0, 2000)}\n`;
+      });
+      return content.substring(0, 30000); // Limit for API
+    }
+
+    let conversationHistory = [];
+
+    chatToggle.addEventListener('click', () => {
+      chatToggle.classList.toggle('active');
+      chatPanel.classList.toggle('active');
+      if (chatPanel.classList.contains('active')) {
+        chatInput.focus();
+      }
+    });
+
+    // Auto-resize textarea
+    chatInput.addEventListener('input', () => {
+      chatInput.style.height = 'auto';
+      chatInput.style.height = Math.min(chatInput.scrollHeight, 120) + 'px';
+    });
+
+    // Send on Enter (Shift+Enter for newline)
+    chatInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' && !e.shiftKey) {
+        e.preventDefault();
+        sendMessage();
+      }
+    });
+
+    chatSend.addEventListener('click', sendMessage);
+
+    function addMessage(text, role) {
+      const div = document.createElement('div');
+      div.className = `chat-message ${role}`;
+      div.innerHTML = text.replace(/\n/g, '<br>');
+      chatMessages.appendChild(div);
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+      return div;
+    }
+
+    function showTyping() {
+      const div = document.createElement('div');
+      div.className = 'chat-message assistant typing';
+      div.id = 'typing-indicator';
+      div.innerHTML = '<span></span><span></span><span></span>';
+      chatMessages.appendChild(div);
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+
+    function hideTyping() {
+      const typing = document.getElementById('typing-indicator');
+      if (typing) typing.remove();
+    }
+
+    async function sendMessage() {
+      const text = chatInput.value.trim();
+      if (!text) return;
+
+      // Add user message
+      addMessage(text, 'user');
+      conversationHistory.push({ role: 'user', content: text });
+      chatInput.value = '';
+      chatInput.style.height = 'auto';
+      chatSend.disabled = true;
+
+      showTyping();
+
+      try {
+        const response = await fetch(CHAT_API, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            message: text,
+            history: conversationHistory.slice(-6), // Last 3 exchanges
+            knowledge: getKnowledgeBase()
+          })
+        });
+
+        hideTyping();
+
+        if (!response.ok) {
+          throw new Error('Network error');
+        }
+
+        const data = await response.json();
+        const reply = data.reply || "I'm sorry, I couldn't process that. Please try again.";
+
+        addMessage(reply, 'assistant');
+        conversationHistory.push({ role: 'assistant', content: reply });
+
+      } catch (error) {
+        hideTyping();
+        addMessage("Sorry, I'm having trouble connecting. Please try again in a moment.", 'assistant');
+      }
+
+      chatSend.disabled = false;
+      chatInput.focus();
+    }
   </script>
 </body>
 </html>
