@@ -1,0 +1,2454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Complete 501(c)(3) tax accounting reference for churches and nonprofit ministries. Housing allowance, compensation, vehicle use, and compliance guidance.">
+  <meta name="keywords" content="501c3, nonprofit, church accounting, housing allowance, minister tax, IRC 107, benevolence, tax compliance">
+  <meta name="author" content="Endless Winning">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="501(c)(3) Tax Accounting Reference | Endless Winning">
+  <meta property="og:description" content="Complete tax accounting reference for churches and nonprofit ministries.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://501c3.endlesswinning.com">
+
+  <title>501(c)(3) Tax Accounting Reference | Endless Winning</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    /* ===================================
+       CSS VARIABLES (Endless Winning Brand)
+       =================================== */
+    :root {
+      --ew-electric-blue: #00A3FF;
+      --ew-midnight-black: #0A0A0A;
+      --ew-pure-white: #FFFFFF;
+
+      --blue-50: #E6F7FF;
+      --blue-100: #B3E5FF;
+      --blue-200: #80D4FF;
+      --blue-300: #4DC3FF;
+      --blue-400: #1AB2FF;
+      --blue-500: #00A3FF;
+      --blue-600: #0088D4;
+      --blue-700: #0066CC;
+      --blue-800: #004D99;
+      --blue-900: #003366;
+      --blue-950: #001A33;
+
+      --gray-50: #F5F5F5;
+      --gray-100: #E0E0E0;
+      --gray-200: #BDBDBD;
+      --gray-300: #9E9E9E;
+      --gray-400: #757575;
+      --gray-500: #616161;
+      --gray-600: #424242;
+      --gray-700: #303030;
+      --gray-800: #1A1A1A;
+      --gray-900: #121212;
+      --gray-950: #0A0A0A;
+
+      --success: #00D68F;
+      --success-dark: #00A06B;
+      --warning: #FFB800;
+      --warning-dark: #CC9200;
+      --error: #FF4757;
+      --error-dark: #CC3945;
+
+      --gradient-primary: linear-gradient(135deg, #00D4FF 0%, #00A3FF 25%, #0066CC 50%, #003366 75%, #0A0A0A 100%);
+      --gradient-simple: linear-gradient(135deg, #00A3FF 0%, #0A0A0A 100%);
+      --gradient-blue: linear-gradient(135deg, #00D4FF 0%, #0066CC 100%);
+
+      --font-heading: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --font-mono: 'JetBrains Mono', 'SF Mono', 'Fira Code', monospace;
+
+      --shadow-glow: 0 0 20px rgba(0, 163, 255, 0.3);
+      --shadow-glow-lg: 0 0 40px rgba(0, 163, 255, 0.4);
+
+      --radius-sm: 4px;
+      --radius-md: 8px;
+      --radius-lg: 12px;
+      --radius-xl: 16px;
+
+      --sidebar-width: 280px;
+      --topbar-height: 64px;
+
+      --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* ===================================
+       RESET & BASE
+       =================================== */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: calc(var(--topbar-height) + 24px);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--gray-100);
+      background: var(--ew-midnight-black);
+      min-height: 100vh;
+    }
+
+    /* ===================================
+       TOP BAR
+       =================================== */
+    .topbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: var(--topbar-height);
+      background: rgba(10, 10, 10, 0.95);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 24px;
+      z-index: 100;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .logo-text {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--ew-pure-white);
+      letter-spacing: -0.02em;
+    }
+
+    .logo-badge {
+      font-size: 0.65rem;
+      font-weight: 600;
+      color: var(--ew-electric-blue);
+      background: rgba(0, 163, 255, 0.15);
+      padding: 4px 8px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .search-container {
+      position: relative;
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .search-input {
+      width: 100%;
+      padding: 10px 16px 10px 44px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: var(--radius-md);
+      color: var(--ew-pure-white);
+      font-size: 0.9rem;
+      font-family: var(--font-body);
+      transition: all 0.2s var(--ease-smooth);
+    }
+
+    .search-input::placeholder {
+      color: var(--gray-500);
+    }
+
+    .search-input:focus {
+      outline: none;
+      border-color: var(--ew-electric-blue);
+      background: rgba(255, 255, 255, 0.08);
+      box-shadow: 0 0 0 3px rgba(0, 163, 255, 0.15);
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 18px;
+      height: 18px;
+      color: var(--gray-500);
+    }
+
+    .search-results {
+      position: absolute;
+      top: calc(100% + 8px);
+      left: 0;
+      right: 0;
+      background: var(--gray-800);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: var(--radius-md);
+      max-height: 400px;
+      overflow-y: auto;
+      display: none;
+      z-index: 200;
+    }
+
+    .search-results.active {
+      display: block;
+    }
+
+    .search-result-item {
+      padding: 12px 16px;
+      cursor: pointer;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      transition: background 0.15s ease;
+    }
+
+    .search-result-item:hover {
+      background: rgba(0, 163, 255, 0.1);
+    }
+
+    .search-result-item:last-child {
+      border-bottom: none;
+    }
+
+    .search-result-title {
+      font-weight: 600;
+      color: var(--ew-pure-white);
+      font-size: 0.9rem;
+      margin-bottom: 4px;
+    }
+
+    .search-result-preview {
+      font-size: 0.8rem;
+      color: var(--gray-400);
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .search-result-preview mark {
+      background: rgba(0, 163, 255, 0.3);
+      color: var(--ew-pure-white);
+      padding: 0 2px;
+      border-radius: 2px;
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--ew-pure-white);
+      cursor: pointer;
+      padding: 8px;
+    }
+
+    /* ===================================
+       LAYOUT
+       =================================== */
+    .layout {
+      display: flex;
+      margin-top: var(--topbar-height);
+      min-height: calc(100vh - var(--topbar-height));
+    }
+
+    /* ===================================
+       SIDEBAR
+       =================================== */
+    .sidebar {
+      position: fixed;
+      top: var(--topbar-height);
+      left: 0;
+      width: var(--sidebar-width);
+      height: calc(100vh - var(--topbar-height));
+      background: rgba(18, 18, 18, 0.95);
+      border-right: 1px solid rgba(255, 255, 255, 0.08);
+      overflow-y: auto;
+      padding: 24px 0;
+      z-index: 50;
+      transition: transform 0.3s var(--ease-smooth);
+    }
+
+    .sidebar::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .sidebar::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    .sidebar::-webkit-scrollbar-thumb {
+      background: var(--gray-700);
+      border-radius: 3px;
+    }
+
+    .sidebar::-webkit-scrollbar-thumb:hover {
+      background: var(--gray-600);
+    }
+
+    .nav-section {
+      margin-bottom: 24px;
+    }
+
+    .nav-section-title {
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--gray-500);
+      padding: 0 24px;
+      margin-bottom: 8px;
+    }
+
+    .nav-link {
+      display: block;
+      padding: 10px 24px;
+      color: var(--gray-300);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: all 0.15s ease;
+      border-left: 3px solid transparent;
+    }
+
+    .nav-link:hover {
+      color: var(--ew-pure-white);
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .nav-link.active {
+      color: var(--ew-electric-blue);
+      background: rgba(0, 163, 255, 0.08);
+      border-left-color: var(--ew-electric-blue);
+    }
+
+    .nav-link-sub {
+      padding-left: 40px;
+      font-size: 0.85rem;
+      color: var(--gray-400);
+    }
+
+    /* ===================================
+       MAIN CONTENT
+       =================================== */
+    .main {
+      flex: 1;
+      margin-left: var(--sidebar-width);
+      padding: 48px 64px;
+      max-width: 900px;
+    }
+
+    /* ===================================
+       HERO SECTION
+       =================================== */
+    .hero {
+      margin-bottom: 64px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .hero-title {
+      font-size: 2.75rem;
+      font-weight: 800;
+      color: var(--ew-pure-white);
+      line-height: 1.1;
+      margin-bottom: 16px;
+      letter-spacing: -0.03em;
+    }
+
+    .hero-title-accent {
+      background: var(--gradient-blue);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-description {
+      font-size: 1.25rem;
+      color: var(--gray-300);
+      line-height: 1.6;
+      max-width: 640px;
+    }
+
+    .hero-meta {
+      display: flex;
+      gap: 24px;
+      margin-top: 24px;
+      font-size: 0.85rem;
+      color: var(--gray-500);
+    }
+
+    .hero-meta-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* ===================================
+       SECTIONS
+       =================================== */
+    .section {
+      margin-bottom: 64px;
+      scroll-margin-top: calc(var(--topbar-height) + 24px);
+    }
+
+    .section-header {
+      margin-bottom: 24px;
+    }
+
+    .section-title {
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: var(--ew-pure-white);
+      margin-bottom: 8px;
+      letter-spacing: -0.02em;
+    }
+
+    .section-subtitle {
+      font-size: 1rem;
+      color: var(--gray-400);
+    }
+
+    .subsection {
+      margin-bottom: 48px;
+      scroll-margin-top: calc(var(--topbar-height) + 24px);
+    }
+
+    .subsection-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--ew-pure-white);
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    /* ===================================
+       CONTENT TYPOGRAPHY
+       =================================== */
+    .content p {
+      margin-bottom: 16px;
+      color: var(--gray-200);
+    }
+
+    .content strong {
+      color: var(--ew-pure-white);
+      font-weight: 600;
+    }
+
+    .content ul, .content ol {
+      margin-bottom: 16px;
+      padding-left: 24px;
+    }
+
+    .content li {
+      margin-bottom: 8px;
+      color: var(--gray-200);
+    }
+
+    .content li::marker {
+      color: var(--ew-electric-blue);
+    }
+
+    .content h4 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--ew-pure-white);
+      margin: 24px 0 12px;
+    }
+
+    .content a {
+      color: var(--ew-electric-blue);
+      text-decoration: none;
+      transition: color 0.15s ease;
+    }
+
+    .content a:hover {
+      color: var(--blue-400);
+      text-decoration: underline;
+    }
+
+    /* ===================================
+       CALLOUT BOXES
+       =================================== */
+    .callout {
+      padding: 20px 24px;
+      border-radius: var(--radius-lg);
+      margin: 24px 0;
+      border-left: 4px solid;
+    }
+
+    .callout-title {
+      font-weight: 700;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .callout-content {
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .callout-content p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Rule Box - Blue */
+    .callout-rule {
+      background: rgba(0, 163, 255, 0.08);
+      border-color: var(--ew-electric-blue);
+    }
+
+    .callout-rule .callout-title {
+      color: var(--ew-electric-blue);
+    }
+
+    /* Warning Box - Amber */
+    .callout-warning {
+      background: rgba(255, 184, 0, 0.08);
+      border-color: var(--warning);
+    }
+
+    .callout-warning .callout-title {
+      color: var(--warning);
+    }
+
+    /* Mistake Box - Red */
+    .callout-mistake {
+      background: rgba(255, 71, 87, 0.08);
+      border-color: var(--error);
+    }
+
+    .callout-mistake .callout-title {
+      color: var(--error);
+    }
+
+    /* Example Box - Green */
+    .callout-example {
+      background: rgba(0, 214, 143, 0.08);
+      border-color: var(--success);
+    }
+
+    .callout-example .callout-title {
+      color: var(--success);
+    }
+
+    /* Tip Box - Purple */
+    .callout-tip {
+      background: rgba(175, 82, 222, 0.08);
+      border-color: #AF52DE;
+    }
+
+    .callout-tip .callout-title {
+      color: #AF52DE;
+    }
+
+    /* ===================================
+       TABLES
+       =================================== */
+    .table-wrapper {
+      overflow-x: auto;
+      margin: 24px 0;
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+    }
+
+    thead {
+      background: rgba(0, 163, 255, 0.1);
+    }
+
+    th {
+      padding: 14px 16px;
+      text-align: left;
+      font-weight: 600;
+      color: var(--ew-pure-white);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      white-space: nowrap;
+    }
+
+    td {
+      padding: 12px 16px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      color: var(--gray-200);
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    tr:hover td {
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    /* ===================================
+       CODE BLOCKS
+       =================================== */
+    code {
+      font-family: var(--font-mono);
+      font-size: 0.875em;
+      background: rgba(0, 163, 255, 0.1);
+      color: var(--blue-300);
+      padding: 2px 6px;
+      border-radius: var(--radius-sm);
+    }
+
+    pre {
+      background: var(--gray-800);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      overflow-x: auto;
+      margin: 24px 0;
+    }
+
+    pre code {
+      background: none;
+      padding: 0;
+      font-size: 0.85rem;
+      line-height: 1.6;
+      color: var(--gray-100);
+    }
+
+    /* ===================================
+       FORMULA BOX
+       =================================== */
+    .formula-box {
+      background: var(--gray-800);
+      border: 1px solid rgba(0, 163, 255, 0.3);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      margin: 24px 0;
+      text-align: center;
+    }
+
+    .formula-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--ew-electric-blue);
+      margin-bottom: 12px;
+    }
+
+    .formula {
+      font-family: var(--font-mono);
+      font-size: 1.25rem;
+      color: var(--ew-pure-white);
+    }
+
+    /* ===================================
+       CHECKLIST
+       =================================== */
+    .checklist {
+      list-style: none;
+      padding: 0;
+      margin: 16px 0;
+    }
+
+    .checklist li {
+      position: relative;
+      padding-left: 32px;
+      margin-bottom: 12px;
+    }
+
+    .checklist li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 4px;
+      width: 18px;
+      height: 18px;
+      border: 2px solid var(--success);
+      border-radius: 4px;
+      background: rgba(0, 214, 143, 0.1);
+    }
+
+    .checklist li::after {
+      content: "";
+      position: absolute;
+      left: 6px;
+      top: 7px;
+      width: 6px;
+      height: 10px;
+      border: solid var(--success);
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+    }
+
+    /* ===================================
+       FOOTER
+       =================================== */
+    .footer {
+      margin-top: 80px;
+      padding: 48px 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .footer-disclaimer {
+      background: rgba(255, 184, 0, 0.08);
+      border: 1px solid rgba(255, 184, 0, 0.3);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      margin-bottom: 32px;
+    }
+
+    .footer-disclaimer-title {
+      font-weight: 700;
+      color: var(--warning);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .footer-disclaimer-text {
+      font-size: 0.9rem;
+      color: var(--gray-300);
+      line-height: 1.7;
+    }
+
+    .footer-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 0.85rem;
+      color: var(--gray-500);
+    }
+
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .footer-brand a {
+      color: var(--ew-electric-blue);
+      text-decoration: none;
+    }
+
+    .footer-brand a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 24px;
+    }
+
+    .footer-links a {
+      color: var(--gray-400);
+      text-decoration: none;
+      transition: color 0.15s ease;
+    }
+
+    .footer-links a:hover {
+      color: var(--ew-pure-white);
+    }
+
+    /* ===================================
+       BACK TO TOP
+       =================================== */
+    .back-to-top {
+      position: fixed;
+      bottom: 32px;
+      right: 32px;
+      width: 48px;
+      height: 48px;
+      background: var(--ew-electric-blue);
+      border: none;
+      border-radius: 50%;
+      color: var(--ew-pure-white);
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s var(--ease-smooth);
+      box-shadow: var(--shadow-glow);
+      z-index: 90;
+    }
+
+    .back-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .back-to-top:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-glow-lg);
+    }
+
+    /* ===================================
+       RESPONSIVE
+       =================================== */
+    @media (max-width: 1024px) {
+      .main {
+        padding: 32px 40px;
+      }
+
+      .sidebar {
+        transform: translateX(-100%);
+      }
+
+      .sidebar.open {
+        transform: translateX(0);
+      }
+
+      .main {
+        margin-left: 0;
+      }
+
+      .mobile-menu-btn {
+        display: block;
+      }
+
+      .sidebar-overlay {
+        position: fixed;
+        top: var(--topbar-height);
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        z-index: 40;
+      }
+
+      .sidebar-overlay.active {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .topbar {
+        padding: 0 16px;
+      }
+
+      .search-container {
+        display: none;
+      }
+
+      .main {
+        padding: 24px 20px;
+      }
+
+      .hero-title {
+        font-size: 2rem;
+      }
+
+      .hero-description {
+        font-size: 1.1rem;
+      }
+
+      .section-title {
+        font-size: 1.5rem;
+      }
+
+      .hero-meta {
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .footer-meta {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+
+    /* ===================================
+       PRINT STYLES
+       =================================== */
+    @media print {
+      .topbar,
+      .sidebar,
+      .back-to-top,
+      .search-container {
+        display: none !important;
+      }
+
+      .main {
+        margin-left: 0;
+        padding: 0;
+        max-width: none;
+      }
+
+      body {
+        background: white;
+        color: black;
+      }
+
+      .hero-title,
+      .section-title,
+      .subsection-title,
+      h4 {
+        color: black;
+      }
+
+      .callout {
+        border: 1px solid #ccc;
+        background: #f9f9f9 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .table-wrapper {
+        border: 1px solid #ccc;
+      }
+
+      a {
+        color: black;
+        text-decoration: underline;
+      }
+
+      a[href]::after {
+        content: " (" attr(href) ")";
+        font-size: 0.8em;
+        color: #666;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- TOP BAR -->
+  <header class="topbar">
+    <a href="#" class="logo">
+      <span class="logo-text">Endless Winning</span>
+      <span class="logo-badge">501(c)(3) Reference</span>
+    </a>
+
+    <div class="search-container">
+      <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+      </svg>
+      <input type="text" class="search-input" id="searchInput" placeholder="Search topics..." aria-label="Search documentation">
+      <div class="search-results" id="searchResults"></div>
+    </div>
+
+    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+      <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </header>
+
+  <!-- SIDEBAR OVERLAY (mobile) -->
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <!-- LAYOUT -->
+  <div class="layout">
+    <!-- SIDEBAR -->
+    <nav class="sidebar" id="sidebar" aria-label="Table of Contents">
+      <div class="nav-section">
+        <div class="nav-section-title">Getting Started</div>
+        <a href="#overview" class="nav-link">Overview</a>
+        <a href="#quick-reference" class="nav-link">Quick Reference</a>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title">Tax Fundamentals</div>
+        <a href="#tax-exempt-status" class="nav-link">Tax-Exempt Status</a>
+        <a href="#employment-taxes" class="nav-link">Employment Taxes</a>
+        <a href="#unrelated-business" class="nav-link">Unrelated Business Income</a>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title">Compensation</div>
+        <a href="#housing-allowance" class="nav-link">Housing Allowance</a>
+        <a href="#reasonable-compensation" class="nav-link">Reasonable Compensation</a>
+        <a href="#fringe-benefits" class="nav-link">Fringe Benefits</a>
+        <a href="#retirement-plans" class="nav-link">Retirement Plans (403b)</a>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title">Reimbursements</div>
+        <a href="#accountable-plans" class="nav-link">Accountable Plans</a>
+        <a href="#auto-allowance" class="nav-link">Auto Allowance</a>
+        <a href="#ministry-vehicles" class="nav-link">Ministry Vehicles</a>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title">Giving & Donations</div>
+        <a href="#charitable-contributions" class="nav-link">Charitable Contributions</a>
+        <a href="#benevolence" class="nav-link">Benevolence Programs</a>
+        <a href="#quid-pro-quo" class="nav-link">Quid Pro Quo</a>
+        <a href="#donor-advised-funds" class="nav-link">Donor-Advised Funds</a>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title">Documentation</div>
+        <a href="#record-keeping" class="nav-link">Record Keeping</a>
+        <a href="#board-governance" class="nav-link">Board Governance</a>
+        <a href="#annual-reporting" class="nav-link">Annual Reporting</a>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title">Special Topics</div>
+        <a href="#fmv" class="nav-link">Fair Market Value</a>
+        <a href="#gross-up" class="nav-link">Gross-Up Calculations</a>
+        <a href="#love-offerings" class="nav-link">Love Offerings</a>
+        <a href="#international" class="nav-link">International Missions</a>
+      </div>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <main class="main">
+      <!-- HERO -->
+      <section class="hero">
+        <h1 class="hero-title">501(c)(3) <span class="hero-title-accent">Tax Accounting</span> Reference</h1>
+        <p class="hero-description">A comprehensive, plain-English guide to tax accounting for churches, religious organizations, and nonprofit ministries. Navigate housing allowance, compensation, vehicle use, and IRS compliance with confidence.</p>
+        <div class="hero-meta">
+          <span class="hero-meta-item">
+            <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            Last updated: January 2025
+          </span>
+          <span class="hero-meta-item">
+            <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            IRS Compliant
+          </span>
+        </div>
+      </section>
+
+      <!-- OVERVIEW -->
+      <section id="overview" class="section">
+        <div class="section-header">
+          <h2 class="section-title">Overview</h2>
+          <p class="section-subtitle">Understanding tax-exempt organization accounting</p>
+        </div>
+
+        <div class="content">
+          <p>This reference covers the unique tax accounting requirements for 501(c)(3) religious and charitable organizations. Unlike for-profit entities, these organizations operate under special IRS rules that provide significant benefits&mdash;but also require careful compliance.</p>
+
+          <div class="callout callout-rule">
+            <div class="callout-title">
+              <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+              Key Principle
+            </div>
+            <div class="callout-content">
+              <p>A 501(c)(3) organization is <strong>already tax-exempt</strong>&mdash;it doesn't need deductions. The focus is on <strong>liability protection</strong>: ensuring compensation isn't reclassified as taxable income and that the organization maintains its exempt status.</p>
+            </div>
+          </div>
+
+          <h4>What This Guide Covers</h4>
+          <ul>
+            <li><strong>Housing Allowance (IRC &sect;107)</strong> &ndash; The minister's most powerful tax benefit</li>
+            <li><strong>Compensation Structures</strong> &ndash; Salary, benefits, and avoiding private inurement</li>
+            <li><strong>Accountable Plans</strong> &ndash; Tax-free reimbursements done right</li>
+            <li><strong>Benevolence Programs</strong> &ndash; Helping those in need without tax consequences</li>
+            <li><strong>Vehicle Use</strong> &ndash; Ministry vehicles, mileage, and fringe benefit rules</li>
+            <li><strong>Donor Compliance</strong> &ndash; Receipts, acknowledgments, and quid pro quo</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- QUICK REFERENCE -->
+      <section id="quick-reference" class="section">
+        <div class="section-header">
+          <h2 class="section-title">Quick Reference</h2>
+          <p class="section-subtitle">Key numbers and thresholds for 2025</p>
+        </div>
+
+        <div class="content">
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>Item</th>
+                  <th>2025 Amount</th>
+                  <th>Notes</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Standard Mileage Rate</td>
+                  <td>67&cent;/mile</td>
+                  <td>Business/ministry use</td>
+                </tr>
+                <tr>
+                  <td>403(b) Elective Deferral Limit</td>
+                  <td>$23,500</td>
+                  <td>Under age 50</td>
+                </tr>
+                <tr>
+                  <td>403(b) Catch-Up (50+)</td>
+                  <td>$7,500</td>
+                  <td>Additional contribution</td>
+                </tr>
+                <tr>
+                  <td>Gift Substantiation Threshold</td>
+                  <td>$250+</td>
+                  <td>Written acknowledgment required</td>
+                </tr>
+                <tr>
+                  <td>Quid Pro Quo Disclosure</td>
+                  <td>$75+</td>
+                  <td>Must disclose fair value</td>
+                </tr>
+                <tr>
+                  <td>Vehicle Donation (Form 1098-C)</td>
+                  <td>$500+</td>
+                  <td>Contemporaneous written ack.</td>
+                </tr>
+                <tr>
+                  <td>Self-Employment Tax Rate</td>
+                  <td>15.3%</td>
+                  <td>On 92.35% of net earnings</td>
+                </tr>
+                <tr>
+                  <td>Child Tax Credit</td>
+                  <td>$2,000/child</td>
+                  <td>Up to $1,700 refundable</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAX-EXEMPT STATUS -->
+      <section id="tax-exempt-status" class="section">
+        <div class="section-header">
+          <h2 class="section-title">Tax-Exempt Status</h2>
+          <p class="section-subtitle">Understanding 501(c)(3) fundamentals</p>
+        </div>
+
+        <div class="content">
+          <p>Section 501(c)(3) of the Internal Revenue Code provides tax-exempt status to organizations organized and operated exclusively for religious, charitable, scientific, or educational purposes.</p>
+
+          <h4>Key Requirements</h4>
+          <ul class="checklist">
+            <li>Organized exclusively for exempt purposes</li>
+            <li>No private inurement to insiders</li>
+            <li>No substantial lobbying activity</li>
+            <li>No campaign intervention</li>
+            <li>Net earnings benefit the organization, not individuals</li>
+          </ul>
+
+          <div class="callout callout-warning">
+            <div class="callout-title">
+              <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
+              Private Inurement
+            </div>
+            <div class="callout-content">
+              <p>Excessive compensation or benefits flowing to insiders (officers, directors, key employees) can result in <strong>intermediate sanctions</strong> (excise taxes) or, in severe cases, <strong>loss of tax-exempt status</strong>.</p>
+            </div>
+          </div>
+
+          <div class="subsection" id="churches-special-status">
+            <h3 class="subsection-title">Churches: Special Status</h3>
+            <p>Churches enjoy unique privileges under the tax code:</p>
+            <ul>
+              <li><strong>Automatic exemption</strong> &ndash; No Form 1023 application required</li>
+              <li><strong>No Form 990 filing</strong> &ndash; Unlike other 501(c)(3)s</li>
+              <li><strong>Limited IRS audit authority</strong> &ndash; Special procedures apply</li>
+              <li><strong>Housing allowance</strong> &ndash; IRC &sect;107 exclusion for ministers</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- EMPLOYMENT TAXES -->
+      <section id="employment-taxes" class="section">
+        <div class="section-header">
+          <h2 class="section-title">Employment Taxes</h2>
+          <p class="section-subtitle">Minister dual status and FICA exemption</p>
+        </div>
+
+        <div class="content">
+          <p>Ministers occupy a unique position in tax law: they're treated as <strong>employees for income tax purposes</strong> but as <strong>self-employed for Social Security/Medicare</strong>.</p>
+
+          <div class="callout callout-rule">
+            <div class="callout-title">
+              <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+              The Dual-Status Rule
+            </div>
+            <div class="callout-content">
+              <p><strong>Income Tax:</strong> Minister receives W-2 (no FICA withholding boxes)<br>
+              <strong>Self-Employment Tax:</strong> Minister pays SE tax on Schedule SE (15.3% on 92.35% of ministerial income)</p>
+            </div>
+          </div>
+
+          <h4>What This Means in Practice</h4>
+          <ul>
+            <li>Church does NOT withhold Social Security/Medicare taxes</li>
+            <li>Minister pays self-employment tax quarterly (estimated payments)</li>
+            <li>Housing allowance is included in SE tax calculation</li>
+            <li>Minister can opt out of Social Security (Form 4361) for religious reasons&mdash;but this is <strong>irrevocable</strong></li>
+          </ul>
+
+          <div class="callout callout-mistake">
+            <div class="callout-title">
+              <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+              Common Mistake
+            </div>
+            <div class="callout-content">
+              <p>Churches sometimes withhold FICA from ministers or treat them as independent contractors (1099). Both are incorrect. Ministers receive a W-2 with boxes 3-6 left blank.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- HOUSING ALLOWANCE -->
+      <section id="housing-allowance" class="section">
+        <div class="section-header">
+          <h2 class="section-title">Housing Allowance</h2>
+          <p class="section-subtitle">IRC &sect;107 &ndash; The minister's most valuable benefit</p>
+        </div>
+
+        <div class="content">
+          <p>The housing allowance allows ordained, licensed, or commissioned ministers to exclude from gross income the portion of their compensation used for housing expenses. This is one of the most significant tax benefits available.</p>
+
+          <div class="callout callout-rule">
+            <div class="callout-title">
+              <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+              Three-Part Limit
+            </div>
+            <div class="callout-content">
+              <p>The excludable amount is the <strong>lowest</strong> of:</p>
+              <ol>
+                <li>Amount officially designated in advance</li>
+                <li>Amount actually spent on housing</li>
+                <li>Fair rental value of the home (furnished, plus utilities)</li>
+              </ol>
+            </div>
+          </div>
+
+          <div class="subsection">
+            <h3 class="subsection-title">Requirements for Valid Designation</h3>
+            <ul class="checklist">
+              <li><strong>In writing</strong> &ndash; Board minutes, resolution, or employment agreement</li>
+              <li><strong>In advance</strong> &ndash; Before the compensation is earned (cannot be backdated)</li>
+              <li><strong>Approved by governing body</strong> &ndash; Board of directors or equivalent</li>
+              <li><strong>Specific amount</strong> &ndash; Dollar amount or percentage of compensation</li>
+            </ul>
+
+            <div class="callout callout-warning">
+              <div class="callout-title">
+                <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                Timing is Critical
+              </div>
+              <div class="callout-content">
+                <p>A housing allowance <strong>cannot be retroactive</strong>. If designated on March 15, it only applies to compensation earned from March 15 forward. For full-year coverage, designate before January 1.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="subsection">
+            <h3 class="subsection-title">Qualifying Housing Expenses</h3>
+            <div class="table-wrapper">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Qualifies</th>
+                    <th>Does NOT Qualify</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Rent or mortgage payments</td>
+                    <td>Food/groceries</td>
+                  </tr>
+                  <tr>
+                    <td>Property taxes</td>
+                    <td>Clothing</td>
+                  </tr>
+                  <tr>
+                    <td>Homeowner's/renter's insurance</td>
+                    <td>Domestic help/maid service</td>
+                  </tr>
+                  <tr>
+                    <td>Utilities (electric, gas, water, trash)</td>
+                    <td>Cost of meals</td>
+                  </tr>
+                  <tr>
+                    <td>Furnishings and appliances</td>
+                    <td>Personal items</td>
+                  </tr>
+                  <tr>
+                    <td>Home repairs and maintenance</td>
+                    <td>Home improvements (add to basis)</td>
+                  </tr>
+                  <tr>
+                    <td>Landscaping and yard care</td>
+                    <td>Personal property (not housing-related)</td>
+                  </tr>
+                  <tr>
+                    <td>Internet and cable (if used at home)</td>
+                    <td>Second home expenses*</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p><em>*Second home expenses may qualify if it's a vacation home the minister occasionally uses.</em></p>
+          </div>
+
+          <div class="subsection">
+            <h3 class="subsection-title">Sample Board Resolution</h3>
+            <pre><code>RESOLUTION OF [CHURCH NAME] BOARD OF DIRECTORS
+
+WHEREAS, [Minister Name] serves as [Title] of [Church Name]; and
+
+WHEREAS, [Church Name] provides compensation to [Minister Name]
+for services rendered; and
+
+WHEREAS, IRC Section 107 permits ministers of the gospel to exclude
+from gross income a housing allowance to the extent used for
+housing expenses;
+
+NOW, THEREFORE, BE IT RESOLVED that of the total compensation paid
+to [Minister Name] during calendar year [YEAR], the amount of
+$[AMOUNT] be designated as a housing allowance pursuant to
+Section 107 of the Internal Revenue Code.
+
+This resolution shall remain in effect until modified or revoked
+by subsequent action of the Board.
+
+Adopted this [DAY] day of [MONTH], [YEAR].
+
+_________________________
+Secretary</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <!-- REASONABLE COMPENSATION -->
+      <section id="reasonable-compensation" class="section">
+        <div class="section-header">
+          <h2 class="section-title">Reasonable Compensation</h2>
+          <p class="section-subtitle">Avoiding excess benefit transactions</p>
+        </div>
+
+        <div class="content">
+          <p>Compensation paid to ministers, officers, and key employees must be "reasonable" under IRC &sect;4958. Unreasonable compensation constitutes an <strong>excess benefit transaction</strong> subject to excise taxes.</p>
+
+          <h4>Factors in Determining Reasonableness</h4>
+          <ul>
+            <li>Comparable compensation at similar organizations</li>
+            <li>Education, experience, and credentials</li>
+            <li>Size of congregation/budget</li>
+            <li>Geographic location (cost of living)</li>
+            <li>Scope of responsibilities</li>
+            <li>Hours worked and travel requirements</li>
+          </ul>
+
+          <div class="callout callout-tip">
+            <div class="callout-title">
+              <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" /></svg>
+              Rebuttable Presumption
+            </div>
+            <div class="callout-content">
+              <p>To establish a "rebuttable presumption of reasonableness," the compensation should be:</p>
+              <ol>
+                <li>Approved by an independent board (no conflicts of interest)</li>
+                <li>Based on appropriate comparability data</li>
+                <li>Documented with concurrent written record of the decision</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FRINGE BENEFITS -->
+      <section id="fringe-benefits" class="section">
+        <div class="section-header">
+          <h2 class="section-title">Fringe Benefits</h2>
+          <p class="section-subtitle">Tax-free and taxable employee benefits</p>
+        </div>
+
+        <div class="content">
+          <h4>Tax-Free Fringe Benefits</h4>
+          <ul>
+            <li><strong>Health insurance premiums</strong> paid by the church</li>
+            <li><strong>Group term life insurance</strong> up to $50,000 coverage</li>
+            <li><strong>De minimis benefits</strong> (occasional meals, small gifts)</li>
+            <li><strong>Working condition fringe</strong> (items needed for the job)</li>
+            <li><strong>Qualified transportation fringe</strong> (parking, transit passes)</li>
+          </ul>
+
+          <h4>Taxable Fringe Benefits</h4>
+          <ul>
+            <li><strong>Personal use of ministry vehicle</strong> (must be valued and reported)</li>
+            <li><strong>Club memberships</strong> for personal use</li>
+            <li><strong>Spouse travel</strong> when not serving business purpose</li>
+            <li><strong>Excessive life insurance</strong> (above $50,000 threshold)</li>
+          </ul>
+
+          <div class="callout callout-warning">
+            <div class="callout-title">
+              <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
+              Vehicle Personal Use
+            </div>
+            <div class="callout-content">
+              <p>If a ministry provides a vehicle that an employee uses for <strong>any personal purposes</strong> (including commuting), the personal-use value must be calculated and reported as taxable income on the W-2.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- RETIREMENT PLANS -->
+      <section id="retirement-plans" class="section">
+        <div class="section-header">
+          <h2 class="section-title">Retirement Plans (403b)</h2>
+          <p class="section-subtitle">Tax-advantaged retirement savings</p>
+        </div>
+
+        <div class="content">
+          <p>501(c)(3) organizations can offer 403(b) retirement plans, similar to 401(k) plans in the for-profit world. Ministers and church employees can make tax-deferred contributions.</p>
+
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>Contribution Type</th>
+                  <th>2025 Limit</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Elective Deferral (under 50)</td>
+                  <td>$23,500</td>
+                </tr>
+                <tr>
+                  <td>Catch-Up (age 50+)</td>
+                  <td>+$7,500</td>
+                </tr>
+                <tr>
+                  <td>15-Year Rule (special catch-up)</td>
+                  <td>+$3,000/year</td>
+                </tr>
+                <tr>
+                  <td>Total Annual Addition</td>
+                  <td>$70,000 (or 100% comp)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="callout callout-tip">
+            <div class="callout-title">
+              <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" /></svg>
+              Housing Allowance in Retirement
+            </div>
+            <div class="callout-content">
+              <p>Distributions from a 403(b)(9) church retirement plan can be designated as housing allowance for retired ministers, extending this benefit into retirement.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ACCOUNTABLE PLANS -->
+      <section id="accountable-plans" class="section">
+        <div class="section-header">
+          <h2 class="section-title">Accountable Plans</h2>
+          <p class="section-subtitle">Tax-free expense reimbursements</p>
+        </div>
+
+        <div class="content">
+          <p>An accountable plan allows organizations to reimburse employees for business expenses <strong>without tax consequences</strong>. Reimbursements under a proper accountable plan are not reported as income.</p>
+
+          <div class="callout callout-rule">
+            <div class="callout-title">
+              <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+              Three Requirements
+            </div>
+            <div class="callout-content">
+              <ol>
+                <li><strong>Business connection</strong> &ndash; Expense must be incurred in connection with services as an employee</li>
+                <li><strong>Adequate accounting</strong> &ndash; Employee must substantiate expenses within a reasonable time (typically 60 days)</li>
+                <li><strong>Return of excess</strong> &ndash; Any excess advance must be returned within a reasonable time (typically 120 days)</li>
+              </ol>
+            </div>
+          </div>
+
+          <h4>Common Reimbursable Expenses</h4>
+          <ul>
+            <li>Mileage for ministry-related travel (at IRS standard rate)</li>
+            <li>Conference and seminar registration fees</li>
+            <li>Books and educational materials</li>
+            <li>Ministry supplies and equipment</li>
+            <li>Travel expenses (airfare, lodging, meals at 50%)</li>
+            <li>Cell phone used for ministry purposes</li>
+          </ul>
+
+          <div class="callout callout-mistake">
+            <div class="callout-title">
+              <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+              What Makes It Non-Accountable
+            </div>
+            <div class="callout-content">
+              <p>If any of the three requirements fail, the plan becomes <strong>non-accountable</strong> and all payments are taxable wages:</p>
+              <ul>
+                <li>No receipts required ("just submit what you spend")</li>
+                <li>No deadline for substantiation</li>
+                <li>Employee keeps excess advances</li>
+                <li>Fixed allowance regardless of actual expenses</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- AUTO ALLOWANCE -->
+      <section id="auto-allowance" class="section">
+        <div class="section-header">
+          <h2 class="section-title">Auto Allowance</h2>
+          <p class="section-subtitle">Vehicle reimbursement methods</p>
+        </div>
+
+        <div class="content">
+          <p>There are several ways to handle vehicle expenses for ministry employees. The method chosen affects tax treatment significantly.</p>
+
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>Method</th>
+                  <th>Tax Treatment</th>
+                  <th>Documentation</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Mileage Reimbursement (accountable)</td>
+                  <td>Tax-free</td>
+                  <td>Mileage log required</td>
+                </tr>
+                <tr>
+                  <td>Fixed Car Allowance</td>
+                  <td>Fully taxable</td>
+                  <td>None (that's the problem)</td>
+                </tr>
+                <tr>
+                  <td>FAVR (Fixed and Variable Rate)</td>
+                  <td>Tax-free if structured properly</td>
+                  <td>Extensive documentation</td>
+                </tr>
+                <tr>
+                  <td>Ministry-Owned Vehicle</td>
+                  <td>Personal use is taxable</td>
+                  <td>Mileage log distinguishing use</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="callout callout-example">
+            <div class="callout-title">
+              <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+              Example: Accountable Mileage Reimbursement
+            </div>
+            <div class="callout-content">
+              <p>Pastor Sarah drives 800 miles for ministry purposes in January.</p>
+              <ul>
+                <li>Reimbursement: 800 &times; $0.67 = <strong>$536</strong></li>
+                <li>Tax impact: <strong>$0</strong> (not reported as income)</li>
+                <li>Required: Mileage log with date, destination, purpose, miles</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MINISTRY VEHICLES -->
+      <section id="ministry-vehicles" class="section">
+        <div class="section-header">
+          <h2 class="section-title">Ministry Vehicles</h2>
+          <p class="section-subtitle">Church-owned vehicle rules and liability</p>
+        </div>
+
+        <div class="content">
+          <p>When a ministry owns a vehicle and provides it to an employee, special rules apply. The key question is whether there's any personal use.</p>
+
+          <h4>100% Ministry Use</h4>
+          <p>If the vehicle is used <strong>exclusively</strong> for ministry purposes:</p>
+          <ul>
+            <li>No taxable fringe benefit to the employee</li>
+            <li>Must maintain mileage log to prove 100% ministry use</li>
+            <li>Vehicle should be stored at church (not employee's home)</li>
+            <li>Written policy prohibiting personal use</li>
+          </ul>
+
+          <h4>Mixed Use (Personal + Ministry)</h4>
+          <p>If there's <strong>any</strong> personal use (including commuting):</p>
+          <ul>
+            <li>Personal-use portion is a taxable fringe benefit</li>
+            <li>Must use IRS valuation method (cents-per-mile, lease value, or commuting rule)</li>
+            <li>Report on employee's W-2</li>
+          </ul>
+
+          <div class="callout callout-warning">
+            <div class="callout-title">
+              <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
+              Decals Don't Create 100% Ministry Use
+            </div>
+            <div class="callout-content">
+              <p>Putting ministry logos or decals on a vehicle does <strong>not</strong> make it 100% ministry use. The IRS looks at <strong>actual usage patterns</strong>. If the employee drives it home and uses it for personal errands, that's personal use regardless of what's on the vehicle.</p>
+            </div>
+          </div>
+
+          <div class="callout callout-rule">
+            <div class="callout-title">
+              <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+              Why Mileage Logs Matter for 501(c)(3)s
+            </div>
+            <div class="callout-content">
+              <p>A 501(c)(3) is already tax-exempt&mdash;it doesn't need deductions. The purpose of logging is <strong>liability protection</strong>:</p>
+              <ul>
+                <li>Proves vehicle expenses weren't disguised personal compensation</li>
+                <li>Protects against reclassification as taxable fringe benefit</li>
+                <li>Supports the organization's exempt status</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CHARITABLE CONTRIBUTIONS -->
+      <section id="charitable-contributions" class="section">
+        <div class="section-header">
+          <h2 class="section-title">Charitable Contributions</h2>
+          <p class="section-subtitle">Donation substantiation requirements</p>
+        </div>
+
+        <div class="content">
+          <p>Proper acknowledgment of donations protects both the donor (for their deduction) and the organization (for compliance).</p>
+
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>Donation Amount</th>
+                  <th>Required Documentation</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Under $250 (cash)</td>
+                  <td>Bank record or written receipt</td>
+                </tr>
+                <tr>
+                  <td>$250 or more (cash)</td>
+                  <td>Written acknowledgment from organization</td>
+                </tr>
+                <tr>
+                  <td>Over $75 (quid pro quo)</td>
+                  <td>Disclosure statement with good-faith FMV estimate</td>
+                </tr>
+                <tr>
+                  <td>Over $250 (non-cash)</td>
+                  <td>Written acknowledgment describing property</td>
+                </tr>
+                <tr>
+                  <td>Over $500 (non-cash)</td>
+                  <td>Donor files Form 8283</td>
+                </tr>
+                <tr>
+                  <td>Over $5,000 (non-cash)</td>
+                  <td>Qualified appraisal required</td>
+                </tr>
+                <tr>
+                  <td>Vehicles over $500</td>
+                  <td>Form 1098-C (within 30 days)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h4>Required Elements of Written Acknowledgment</h4>
+          <ul class="checklist">
+            <li>Organization name</li>
+            <li>Date of contribution</li>
+            <li>Amount of cash (or description of non-cash property)</li>
+            <li>Statement of whether goods/services were provided</li>
+            <li>Description and good-faith value estimate of any goods/services</li>
+            <li>Statement that only the amount exceeding FMV is deductible</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- BENEVOLENCE -->
+      <section id="benevolence" class="section">
+        <div class="section-header">
+          <h2 class="section-title">Benevolence Programs</h2>
+          <p class="section-subtitle">Helping those in need without tax consequences</p>
+        </div>
+
+        <div class="content">
+          <p>Churches and nonprofits often assist individuals in need through benevolence programs. When structured properly, these payments are <strong>not taxable income</strong> to the recipient.</p>
+
+          <div class="callout callout-rule">
+            <div class="callout-title">
+              <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+              Key Distinction
+            </div>
+            <div class="callout-content">
+              <ul>
+                <li><strong>To employees:</strong> Payments are taxable compensation (W-2 wages)</li>
+                <li><strong>To non-employees in need:</strong> Not taxable (if proper benevolence policy)</li>
+              </ul>
+            </div>
+          </div>
+
+          <h4>Requirements for Tax-Free Benevolence</h4>
+          <ul class="checklist">
+            <li><strong>Recipient is NOT an employee</strong> of the organization</li>
+            <li><strong>Demonstrable need</strong> documented (financial hardship, medical emergency, disaster)</li>
+            <li><strong>Committee review</strong> &ndash; Not decided by one person</li>
+            <li><strong>Written policy</strong> defining eligibility criteria</li>
+            <li><strong>No quid pro quo</strong> &ndash; Not in exchange for services or attendance</li>
+            <li><strong>Records maintained</strong> with need documentation</li>
+          </ul>
+
+          <div class="callout callout-example">
+            <div class="callout-title">
+              <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+              Example: Vehicle Donation to Non-Employee
+            </div>
+            <div class="callout-content">
+              <p>A church gives a donated vehicle (FMV $8,000) to a single mother in need:</p>
+              <ul>
+                <li>She is not an employee of the church</li>
+                <li>Benevolence committee documented her financial hardship</li>
+                <li>Vehicle was given under the church's written benevolence policy</li>
+                <li><strong>Result:</strong> Not taxable income to her</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="callout callout-mistake">
+            <div class="callout-title">
+              <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+              Same Vehicle to Employee = Taxable
+            </div>
+            <div class="callout-content">
+              <p>If that same $8,000 vehicle were given to the church's youth pastor:</p>
+              <ul>
+                <li>It's <strong>taxable compensation</strong></li>
+                <li>Must be reported on W-2</li>
+                <li>Church may need to "gross up" to cover tax burden</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- QUID PRO QUO -->
+      <section id="quid-pro-quo" class="section">
+        <div class="section-header">
+          <h2 class="section-title">Quid Pro Quo Contributions</h2>
+          <p class="section-subtitle">When donors receive something in return</p>
+        </div>
+
+        <div class="content">
+          <p>When a donor receives goods or services in exchange for a contribution, only the amount <strong>exceeding the fair market value</strong> of what they received is deductible.</p>
+
+          <div class="callout callout-example">
+            <div class="callout-title">
+              <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+              Example: Charity Gala
+            </div>
+            <div class="callout-content">
+              <p>Donor pays $500 for a charity dinner:</p>
+              <ul>
+                <li>Fair market value of dinner: $75</li>
+                <li>Deductible contribution: $500 - $75 = <strong>$425</strong></li>
+              </ul>
+              <p>The organization must provide a <strong>written disclosure</strong> stating that only $425 is deductible.</p>
+            </div>
+          </div>
+
+          <h4>Disclosure Requirements (over $75)</h4>
+          <p>For quid pro quo contributions exceeding $75, the organization must provide:</p>
+          <ul>
+            <li>Written statement that only the excess over FMV is deductible</li>
+            <li>Good-faith estimate of the FMV of goods/services provided</li>
+          </ul>
+
+          <h4>Exceptions (No Disclosure Needed)</h4>
+          <ul>
+            <li><strong>Token items</strong> with organization's name (value under $13.10)</li>
+            <li><strong>Low-cost articles</strong> (under $131 for 2025)</li>
+            <li><strong>Intangible religious benefits</strong> (e.g., admission to religious services)</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- DONOR-ADVISED FUNDS -->
+      <section id="donor-advised-funds" class="section">
+        <div class="section-header">
+          <h2 class="section-title">Donor-Advised Funds</h2>
+          <p class="section-subtitle">Giving through intermediary organizations</p>
+        </div>
+
+        <div class="content">
+          <p>Donor-advised funds (DAFs) are charitable giving accounts held by sponsoring organizations. Donors get an immediate deduction when contributing to the DAF, then recommend grants over time.</p>
+
+          <h4>Key Points for Organizations</h4>
+          <ul>
+            <li>Grants from DAFs do <strong>not</strong> require acknowledgment (the DAF sponsor already provided one)</li>
+            <li>DAF grants cannot provide <strong>goods or services</strong> to the donor</li>
+            <li>Cannot fulfill a donor's legally binding pledge</li>
+            <li>Cannot provide the donor with more than incidental benefits</li>
+          </ul>
+
+          <div class="callout callout-warning">
+            <div class="callout-title">
+              <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
+              No Quid Pro Quo with DAF Grants
+            </div>
+            <div class="callout-content">
+              <p>A DAF grant cannot be used to purchase event tickets, auction items, or anything else that provides value to the original donor. This would disqualify the grant.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- RECORD KEEPING -->
+      <section id="record-keeping" class="section">
+        <div class="section-header">
+          <h2 class="section-title">Record Keeping</h2>
+          <p class="section-subtitle">Documentation requirements and retention</p>
+        </div>
+
+        <div class="content">
+          <h4>Retention Periods</h4>
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>Document Type</th>
+                  <th>Retention Period</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Tax returns (Form 990)</td>
+                  <td>Permanently</td>
+                </tr>
+                <tr>
+                  <td>Payroll records</td>
+                  <td>7 years</td>
+                </tr>
+                <tr>
+                  <td>Donation records</td>
+                  <td>7 years</td>
+                </tr>
+                <tr>
+                  <td>Board meeting minutes</td>
+                  <td>Permanently</td>
+                </tr>
+                <tr>
+                  <td>Contracts and leases</td>
+                  <td>7 years after expiration</td>
+                </tr>
+                <tr>
+                  <td>Property records</td>
+                  <td>7 years after disposition</td>
+                </tr>
+                <tr>
+                  <td>Employment applications (not hired)</td>
+                  <td>3 years</td>
+                </tr>
+                <tr>
+                  <td>Personnel files</td>
+                  <td>7 years after termination</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- BOARD GOVERNANCE -->
+      <section id="board-governance" class="section">
+        <div class="section-header">
+          <h2 class="section-title">Board Governance</h2>
+          <p class="section-subtitle">Fiduciary duties and best practices</p>
+        </div>
+
+        <div class="content">
+          <h4>Board Member Duties</h4>
+          <ul>
+            <li><strong>Duty of Care</strong> &ndash; Make informed decisions, attend meetings, review materials</li>
+            <li><strong>Duty of Loyalty</strong> &ndash; Act in the organization's best interest, disclose conflicts</li>
+            <li><strong>Duty of Obedience</strong> &ndash; Ensure compliance with laws and governing documents</li>
+          </ul>
+
+          <h4>Conflict of Interest Policy</h4>
+          <p>Every 501(c)(3) should have a written conflict of interest policy that:</p>
+          <ul class="checklist">
+            <li>Defines what constitutes a conflict</li>
+            <li>Requires disclosure of potential conflicts</li>
+            <li>Establishes procedures for managing conflicts</li>
+            <li>Requires annual disclosure statements from board members</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ANNUAL REPORTING -->
+      <section id="annual-reporting" class="section">
+        <div class="section-header">
+          <h2 class="section-title">Annual Reporting</h2>
+          <p class="section-subtitle">Form 990 and state requirements</p>
+        </div>
+
+        <div class="content">
+          <p>Most 501(c)(3) organizations must file an annual information return with the IRS. <strong>Churches are exempt</strong> from this requirement.</p>
+
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>Gross Receipts</th>
+                  <th>Form Required</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>$50,000 or less</td>
+                  <td>Form 990-N (e-Postcard)</td>
+                </tr>
+                <tr>
+                  <td>$50,001 - $200,000</td>
+                  <td>Form 990-EZ or 990</td>
+                </tr>
+                <tr>
+                  <td>Over $200,000 or assets over $500,000</td>
+                  <td>Form 990</td>
+                </tr>
+                <tr>
+                  <td>Churches (regardless of size)</td>
+                  <td>None required (optional)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="callout callout-warning">
+            <div class="callout-title">
+              <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
+              Auto-Revocation
+            </div>
+            <div class="callout-content">
+              <p>If a non-church organization fails to file for <strong>three consecutive years</strong>, its tax-exempt status is <strong>automatically revoked</strong>. Reinstatement requires a new application.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAIR MARKET VALUE -->
+      <section id="fmv" class="section">
+        <div class="section-header">
+          <h2 class="section-title">Fair Market Value (FMV)</h2>
+          <p class="section-subtitle">Determining value for donations and compensation</p>
+        </div>
+
+        <div class="content">
+          <p>Fair Market Value is defined by the IRS as "the price that property would sell for on the open market, between a willing buyer and a willing seller, with both having reasonable knowledge of all necessary facts."</p>
+
+          <div class="callout callout-rule">
+            <div class="callout-title">
+              <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+              FMV Is a Range, Not a Fixed Number
+            </div>
+            <div class="callout-content">
+              <p>For vehicles and other property, FMV is typically expressed as a <strong>range based on condition</strong>. A vehicle might be worth $18,000-$25,000 depending on its condition (Excellent, Good, Fair, Poor).</p>
+            </div>
+          </div>
+
+          <h4>Condition-Based Valuation (Vehicles)</h4>
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>Condition</th>
+                  <th>Description</th>
+                  <th>FMV Position</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Excellent</td>
+                  <td>Like new, no defects, low miles</td>
+                  <td>Top of range</td>
+                </tr>
+                <tr>
+                  <td>Good</td>
+                  <td>Minor wear, well-maintained</td>
+                  <td>Upper-middle</td>
+                </tr>
+                <tr>
+                  <td>Fair</td>
+                  <td>Normal wear, some repairs needed</td>
+                  <td>Lower-middle</td>
+                </tr>
+                <tr>
+                  <td>Poor</td>
+                  <td>Significant issues, high miles</td>
+                  <td>Bottom of range</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h4>Documentation Checklist for Lower Valuation</h4>
+          <ul class="checklist">
+            <li><strong>Photographs</strong> showing actual condition</li>
+            <li><strong>Inspection report</strong> noting defects or needed repairs</li>
+            <li><strong>Repair estimates</strong> from mechanics</li>
+            <li><strong>Comparable sales</strong> data from similar vehicles</li>
+            <li><strong>Valuation source</strong> (KBB, NADA, Edmunds) with condition selected</li>
+            <li><strong>Written narrative</strong> explaining condition assessment</li>
+          </ul>
+
+          <div class="callout callout-example">
+            <div class="callout-title">
+              <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+              Example: Vehicle FMV Determination
+            </div>
+            <div class="callout-content">
+              <p>Church gives employee a 2019 Honda Accord:</p>
+              <ul>
+                <li>KBB Range: $18,000 (Poor) - $25,000 (Excellent)</li>
+                <li>Actual condition: 95,000 miles, dent in door, AC needs repair</li>
+                <li>Documented "Fair" condition with photos and repair estimate</li>
+                <li><strong>Supportable FMV: $19,500</strong></li>
+              </ul>
+              <p>Tax impact: $19,500 reported on W-2 (vs. $25,000 if not documented)</p>
+            </div>
+          </div>
+
+          <div class="callout callout-mistake">
+            <div class="callout-title">
+              <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+              Red Flags to Avoid
+            </div>
+            <div class="callout-content">
+              <ul>
+                <li>Using "Poor" condition without supporting documentation</li>
+                <li>Valuing below the lowest published range</li>
+                <li>No photographs or inspection records</li>
+                <li>Inconsistent condition assessments</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- GROSS-UP -->
+      <section id="gross-up" class="section">
+        <div class="section-header">
+          <h2 class="section-title">Gross-Up Calculations</h2>
+          <p class="section-subtitle">Covering employee tax burden on non-cash benefits</p>
+        </div>
+
+        <div class="content">
+          <p><strong>Gross-up</strong> means increasing a payment so that after taxes, the employee receives the intended net value. It's used when providing taxable benefits where you want to cover the employee's tax burden.</p>
+
+          <div class="formula-box">
+            <div class="formula-label">Gross-Up Formula</div>
+            <div class="formula">Gross Amount = Net Value &divide; (1 - Tax Rate)</div>
+          </div>
+
+          <div class="callout callout-example">
+            <div class="callout-title">
+              <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+              Example: Vehicle Given to Employee
+            </div>
+            <div class="callout-content">
+              <p><strong>Without gross-up:</strong></p>
+              <ul>
+                <li>Church gives employee a vehicle worth $20,000</li>
+                <li>Employee owes ~$5,000 in taxes (25% combined rate)</li>
+                <li>Employee must pay $5,000 out of pocket</li>
+              </ul>
+              <p><strong>With gross-up:</strong></p>
+              <ul>
+                <li>Gross-up: $20,000 &divide; (1 - 0.25) = $26,667</li>
+                <li>Church pays employee additional $6,667 in cash</li>
+                <li>After taxes on the full $26,667, employee keeps ~$20,000 net</li>
+              </ul>
+            </div>
+          </div>
+
+          <h4>When to Use Gross-Up</h4>
+          <ul>
+            <li>Providing taxable benefits (vehicles, electronics, etc.)</li>
+            <li>Moving expenses paid by employer</li>
+            <li>Awards or bonuses where net amount matters</li>
+            <li>When the organization wants to fully cover the employee's cost</li>
+          </ul>
+
+          <h4>Cost Comparison</h4>
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>Approach</th>
+                  <th>Ministry Cost</th>
+                  <th>Employee Receives</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>No gross-up</td>
+                  <td>$20,000</td>
+                  <td>$20,000 vehicle minus ~$5,000 tax</td>
+                </tr>
+                <tr>
+                  <td>With gross-up</td>
+                  <td>$26,667</td>
+                  <td>$20,000 vehicle + tax covered</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="callout callout-tip">
+            <div class="callout-title">
+              <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" /></svg>
+              Standard Practice
+            </div>
+            <div class="callout-content">
+              <p><strong>No gross-up is the default.</strong> Most organizations simply report the FMV and let the employee handle their own tax liability. Gross-up is optional and adds cost to the organization.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- LOVE OFFERINGS -->
+      <section id="love-offerings" class="section">
+        <div class="section-header">
+          <h2 class="section-title">Love Offerings</h2>
+          <p class="section-subtitle">Special gifts to ministers</p>
+        </div>
+
+        <div class="content">
+          <p>"Love offerings" are special gifts given to ministers, often for speaking engagements or in appreciation for service. The tax treatment depends on how they're collected and distributed.</p>
+
+          <h4>Generally Taxable</h4>
+          <p>In most cases, love offerings are <strong>taxable income</strong> to the minister because:</p>
+          <ul>
+            <li>They're given in connection with services performed</li>
+            <li>There's an expectation of payment (even if not stated)</li>
+            <li>The church controls and distributes the funds</li>
+          </ul>
+
+          <div class="callout callout-rule">
+            <div class="callout-title">
+              <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+              IRS Position
+            </div>
+            <div class="callout-content">
+              <p>The IRS generally treats love offerings as taxable compensation when given to someone who performed services for the organization, regardless of what it's called.</p>
+            </div>
+          </div>
+
+          <h4>Reporting Requirements</h4>
+          <ul>
+            <li><strong>Employee ministers:</strong> Include on W-2</li>
+            <li><strong>Guest speakers (non-employee):</strong> Issue 1099-NEC if $600+</li>
+            <li><strong>Donors:</strong> Cannot deduct as they're paying for services rendered</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- INTERNATIONAL -->
+      <section id="international" class="section">
+        <div class="section-header">
+          <h2 class="section-title">International Missions</h2>
+          <p class="section-subtitle">Supporting work outside the US</p>
+        </div>
+
+        <div class="content">
+          <p>US 501(c)(3) organizations can support international charitable activities, but must maintain control over how funds are used.</p>
+
+          <h4>Key Requirements</h4>
+          <ul>
+            <li><strong>Expenditure responsibility</strong> &ndash; Organization must control how funds are spent</li>
+            <li><strong>No earmarking</strong> &ndash; Donors cannot direct funds to specific individuals</li>
+            <li><strong>Equivalency determination</strong> &ndash; Verify foreign recipients qualify as charitable</li>
+            <li><strong>Proper documentation</strong> &ndash; Written agreements with foreign partners</li>
+          </ul>
+
+          <div class="callout callout-warning">
+            <div class="callout-title">
+              <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
+              OFAC Compliance
+            </div>
+            <div class="callout-content">
+              <p>Organizations must ensure they're not providing support to individuals, entities, or countries on the Office of Foreign Assets Control (OFAC) sanctions list. Screen all international recipients.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- UNRELATED BUSINESS INCOME -->
+      <section id="unrelated-business" class="section">
+        <div class="section-header">
+          <h2 class="section-title">Unrelated Business Income</h2>
+          <p class="section-subtitle">When tax-exempt organizations owe tax</p>
+        </div>
+
+        <div class="content">
+          <p>Even tax-exempt organizations may owe tax on income from activities not substantially related to their exempt purpose. This is called <strong>Unrelated Business Income Tax (UBIT)</strong>.</p>
+
+          <h4>Three-Part Test</h4>
+          <p>Income is subject to UBIT if it's from an activity that is:</p>
+          <ol>
+            <li><strong>A trade or business</strong></li>
+            <li><strong>Regularly carried on</strong></li>
+            <li><strong>Not substantially related</strong> to the exempt purpose</li>
+          </ol>
+
+          <h4>Common Exclusions (NOT UBIT)</h4>
+          <ul>
+            <li>Volunteer labor activities</li>
+            <li>Convenience of members (e.g., church bookstore)</li>
+            <li>Donated merchandise sales</li>
+            <li>Investment income (dividends, interest)</li>
+            <li>Rental income from real property (generally)</li>
+          </ul>
+
+          <div class="callout callout-example">
+            <div class="callout-title">
+              <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+              Examples
+            </div>
+            <div class="callout-content">
+              <p><strong>Not UBIT:</strong> Church rents fellowship hall for weddings (occasional, related to mission)</p>
+              <p><strong>Likely UBIT:</strong> Church operates a regular coffee shop open to public, staffed by employees</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="footer">
+        <div class="footer-disclaimer">
+          <div class="footer-disclaimer-title">
+            <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
+            Important Disclaimer
+          </div>
+          <p class="footer-disclaimer-text">
+            This reference guide is for <strong>educational purposes only</strong> and does not constitute legal, tax, or accounting advice. Tax laws are complex and change frequently. Every organization's situation is unique. <strong>Always consult with a qualified CPA, tax attorney, or other professional</strong> before making decisions that affect your organization's tax status or compliance. Endless Winning and its affiliates are not responsible for any actions taken based on this information.
+          </p>
+        </div>
+
+        <div class="footer-meta">
+          <div class="footer-brand">
+            &copy; 2025 <a href="https://endlesswinning.com" target="_blank" rel="noopener">Endless Winning</a> &mdash; A registered 501(c)(3) organization
+          </div>
+          <div class="footer-links">
+            <a href="https://endlesswinning.com" target="_blank" rel="noopener">Main Site</a>
+            <a href="#overview">Back to Top</a>
+          </div>
+        </div>
+      </footer>
+    </main>
+  </div>
+
+  <!-- BACK TO TOP BUTTON -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+    </svg>
+  </button>
+
+  <script>
+    // ===================================
+    // SCROLL SPY
+    // ===================================
+    const sections = document.querySelectorAll('.section, .subsection');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    function updateActiveLink() {
+      let current = '';
+      const scrollPos = window.scrollY + 100;
+
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+
+        if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + current) {
+          link.classList.add('active');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', updateActiveLink);
+    updateActiveLink();
+
+    // ===================================
+    // BACK TO TOP
+    // ===================================
+    const backToTop = document.getElementById('backToTop');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 500) {
+        backToTop.classList.add('visible');
+      } else {
+        backToTop.classList.remove('visible');
+      }
+    });
+
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // ===================================
+    // MOBILE MENU
+    // ===================================
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const sidebar = document.getElementById('sidebar');
+    const sidebarOverlay = document.getElementById('sidebarOverlay');
+
+    function toggleMenu() {
+      sidebar.classList.toggle('open');
+      sidebarOverlay.classList.toggle('active');
+    }
+
+    mobileMenuBtn.addEventListener('click', toggleMenu);
+    sidebarOverlay.addEventListener('click', toggleMenu);
+
+    // Close menu when clicking a link (mobile)
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 1024) {
+          sidebar.classList.remove('open');
+          sidebarOverlay.classList.remove('active');
+        }
+      });
+    });
+
+    // ===================================
+    // SEARCH
+    // ===================================
+    const searchInput = document.getElementById('searchInput');
+    const searchResults = document.getElementById('searchResults');
+
+    // Build search index
+    const searchIndex = [];
+    sections.forEach(section => {
+      const title = section.querySelector('.section-title, .subsection-title');
+      const content = section.textContent;
+      if (title) {
+        searchIndex.push({
+          id: section.id,
+          title: title.textContent,
+          content: content.substring(0, 500)
+        });
+      }
+    });
+
+    function performSearch(query) {
+      if (!query || query.length < 2) {
+        searchResults.classList.remove('active');
+        return;
+      }
+
+      const q = query.toLowerCase();
+      const matches = searchIndex.filter(item =>
+        item.title.toLowerCase().includes(q) ||
+        item.content.toLowerCase().includes(q)
+      ).slice(0, 8);
+
+      if (matches.length === 0) {
+        searchResults.innerHTML = '<div class="search-result-item"><div class="search-result-title">No results found</div></div>';
+      } else {
+        searchResults.innerHTML = matches.map(item => {
+          const preview = item.content.substring(0, 150);
+          const highlighted = preview.replace(new RegExp(`(${query})`, 'gi'), '<mark>$1</mark>');
+          return `
+            <div class="search-result-item" data-id="${item.id}">
+              <div class="search-result-title">${item.title}</div>
+              <div class="search-result-preview">${highlighted}...</div>
+            </div>
+          `;
+        }).join('');
+      }
+
+      searchResults.classList.add('active');
+    }
+
+    searchInput.addEventListener('input', (e) => {
+      performSearch(e.target.value);
+    });
+
+    searchInput.addEventListener('focus', () => {
+      if (searchInput.value.length >= 2) {
+        searchResults.classList.add('active');
+      }
+    });
+
+    searchResults.addEventListener('click', (e) => {
+      const item = e.target.closest('.search-result-item');
+      if (item && item.dataset.id) {
+        document.getElementById(item.dataset.id).scrollIntoView({ behavior: 'smooth' });
+        searchResults.classList.remove('active');
+        searchInput.value = '';
+      }
+    });
+
+    // Close search when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.search-container')) {
+        searchResults.classList.remove('active');
+      }
+    });
+
+    // ===================================
+    // KEYBOARD SHORTCUTS
+    // ===================================
+    document.addEventListener('keydown', (e) => {
+      // Cmd/Ctrl + K to focus search
+      if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+        e.preventDefault();
+        searchInput.focus();
+      }
+
+      // Escape to close search
+      if (e.key === 'Escape') {
+        searchResults.classList.remove('active');
+        searchInput.blur();
+      }
+    });
+  </script>
+</body>
+</html>
